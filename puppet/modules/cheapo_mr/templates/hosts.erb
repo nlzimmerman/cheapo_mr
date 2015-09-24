@@ -1,0 +1,8 @@
+127.0.0.1   localhost localhost.localdomain
+<%= @spark_master -%> spark-master
+<%
+x = 0
+for y in @spark_workers do
+x = x+1 -%>
+<%= y -%> spark-worker-<%= x %>
+<% end -%>
